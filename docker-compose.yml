@@ -1,0 +1,54 @@
+version: "3"
+
+networks:
+  microfrontends-example:
+    driver: bridge
+
+services:
+  shell:
+    build: ./shell
+    container_name: shell
+    tty: true
+    volumes:
+      - ./shell/:/shell/
+    ports:
+      - "3000:3000"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
+
+  mf1:
+    build: ./mf1
+    container_name: mf1
+    tty: true
+    volumes:
+      - ./mf1/:/mf1/
+    ports:
+      - "3001:3001"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
+
+  mf2:
+    build: ./mf2
+    container_name: mf2
+    tty: true
+    volumes:
+      - ./mf2/:/mf2/
+    ports:
+      - "3002:3002"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
+
+  auth:
+    build: ./auth
+    container_name: auth
+    tty: true
+    volumes:
+      - ./auth/:/auth/
+    ports:
+      - "3003:3003"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
