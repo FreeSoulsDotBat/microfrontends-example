@@ -1,0 +1,23 @@
+#header {
+	height: 5rem;
+	background-color: rgb(219, 219, 219);
+	padding: 1rem;
+	font-size: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header button {
+	width: 4rem;
+	height: 2.5rem;
+	background-color: rgb(147, 41, 161);
+	outline: none;
+	border: none;
+	color: white;
+	font-size: 1rem;
+	padding: 0.5rem;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
