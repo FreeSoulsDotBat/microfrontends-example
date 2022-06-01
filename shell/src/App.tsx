@@ -1,14 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Bootstrap } from './Bootstrap'
 
-import "./index.css";
+import './index.css'
 
-const App = () => (
-  <div className="container">
-    <div>Name: shell</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
-);
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<Bootstrap />, document.getElementById('app'))
