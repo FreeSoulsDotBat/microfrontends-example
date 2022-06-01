@@ -1,0 +1,10 @@
+{
+  "name": "microfrontends-example",
+  "version": "1.0.0",
+  "description": "Example of a Microfrontends based architecture.",
+  "main": "index.js",
+  "repository": "https://github.com/FreeSoulsDotBat/microfrontends-example",
+  "author": "FreeSoulsDotBat",
+  "license": "MIT",
+  "private": false
+}
