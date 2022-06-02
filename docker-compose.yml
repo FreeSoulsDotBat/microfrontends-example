@@ -52,3 +52,15 @@ services:
     networks:
       - microfrontends-example
     entrypoint: ["yarn", "start"]
+
+  data-validation:
+    build: ./data-validation
+    container_name: data-validation
+    tty: true
+    volumes:
+      - ./data-validation/:/data-validation/
+    ports:
+      - "3004:3004"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
