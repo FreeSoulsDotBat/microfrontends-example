@@ -1,6 +1,6 @@
 FROM node:lts
 
-WORKDIR /apps/shell
+WORKDIR /apps/data-validation
 
 COPY package.json package.json
 COPY yarn.lock yarn.lock
@@ -8,3 +8,4 @@ COPY yarn.lock yarn.lock
 RUN yarn install
 
 COPY . .
+
