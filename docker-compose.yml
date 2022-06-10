@@ -29,38 +29,38 @@ services:
       - microfrontends-example
     entrypoint: ["yarn", "start"]
 
-  mf2:
-    build: ./mf2
-    container_name: mf2
-    tty: true
-    volumes:
-      - ./mf2/:/mf2/
-    ports:
-      - "3002:3002"
-    networks:
-      - microfrontends-example
-    entrypoint: ["yarn", "start"]
+  # mf2:
+  #   build: ./mf2
+  #   container_name: mf2
+  #   tty: true
+  #   volumes:
+  #     - ./mf2/:/mf2/
+  #   ports:
+  #     - "3002:3002"
+  #   networks:
+  #     - microfrontends-example
+  #   entrypoint: ["yarn", "start"]
 
-  auth:
-    build: ./auth
-    container_name: auth
-    tty: true
-    volumes:
-      - ./auth/:/auth/
-    ports:
-      - "3003:3003"
-    networks:
-      - microfrontends-example
-    entrypoint: ["yarn", "start"]
+  # auth:
+  #   build: ./auth
+  #   container_name: auth
+  #   tty: true
+  #   volumes:
+  #     - ./auth/:/auth/
+  #   ports:
+  #     - "3003:3003"
+  #   networks:
+  #     - microfrontends-example
+  #   entrypoint: ["yarn", "start"]
 
-  data-validation:
-    build: ./data-validation
-    container_name: data-validation
-    tty: true
-    volumes:
-      - ./data-validation/:/data-validation/
-    ports:
-      - "3004:3004"
-    networks:
-      - microfrontends-example
-    entrypoint: ["yarn", "start"]
+  # data-validation:
+  #   build: ./data-validation
+  #   container_name: data-validation
+  #   tty: true
+  #   volumes:
+  #     - ./data-validation/:/data-validation/
+  #   ports:
+  #     - "3004:3004"
+  #   networks:
+  #     - microfrontends-example
+  #   entrypoint: ["yarn", "start"]
