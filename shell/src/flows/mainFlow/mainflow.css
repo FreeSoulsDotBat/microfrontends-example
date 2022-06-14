@@ -27,7 +27,7 @@
 	width: 4rem;
 	height: 2.5rem;
 	text-decoration: none;
-	background-color: rgb(41, 43, 161);
+	background-color: #1d4ed8;
 	outline: none;
 	border: none;
 	color: white;
@@ -36,11 +36,10 @@
 	font-weight: bold;
 	border-radius: 0.5rem;
 	cursor: pointer;
-	opacity: 1;
 	transition: 0.3s;
 }
 
 .base__links:hover {
-	opacity: 0.8;
+	background-color: #2563eb;
 	transition: 0.5s;
 }

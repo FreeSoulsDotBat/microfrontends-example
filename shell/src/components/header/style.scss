@@ -9,9 +9,9 @@
 }
 
 #header button {
-	width: 4rem;
-	height: 2.5rem;
-	background-color: rgb(147, 41, 161);
+	width: auto;
+	height: auto;
+	background-color: #7c3aed;
 	outline: none;
 	border: none;
 	color: white;
@@ -20,11 +20,10 @@
 	font-weight: bold;
 	border-radius: 0.5rem;
 	cursor: pointer;
-	opacity: 1;
 	transition: 0.3s;
 }
 
 #header button:hover {
-	opacity: 0.8;
+	background-color: #8b5cf6;
 	transition: 0.5s;
 }

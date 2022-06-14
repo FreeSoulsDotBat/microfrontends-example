@@ -43,7 +43,9 @@ module.exports = {
 		new ModuleFederationPlugin({
 			name: 'mf1',
 			filename: 'remoteEntry.js',
-			remotes: {},
+			remotes: {
+				dataValidation: 'dataValidation@http://localhost:3004/remoteEntry.js'
+			},
 			exposes: {
 				'./Mf1Routes': './src/routes.tsx'
 			},

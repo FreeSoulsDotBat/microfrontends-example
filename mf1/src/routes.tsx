@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Index } from './flows/mainFlow/index/Index'
+import { MainFlow } from './flows'
 
 const Mf1Routes = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<Index />} />
+			<Route path="/" element={<MainFlow />} />
 		</Routes>
 	)
 }
