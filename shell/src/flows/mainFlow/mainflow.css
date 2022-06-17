@@ -18,6 +18,8 @@
 #base__content {
 	display: flex;
 	height: auto;
+	width: auto;
+	min-height: 20rem;
 	justify-content: center;
 	align-items: center;
 	grid-area: content;

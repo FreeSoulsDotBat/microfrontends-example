@@ -1,16 +1,3 @@
 #mfone__dog-container {
-	@apply flex flex-col justify-center items-center w-full h-full;
-}
-
-#mfone__links-box {
-	@apply flex items-center justify-around w-full h-full;
-}
-
-.mfone__dog-links {
-	@apply no-underline bg-blue-700 outline-none border-none text-white
-    text-base p-2 font-bold rounded-lg cursor-pointer duration-300 w-auto h-auto;
-}
-
-.mfone__dog-links:hover {
-	@apply bg-blue-600 duration-500;
+	@apply grid w-auto h-full;
 }

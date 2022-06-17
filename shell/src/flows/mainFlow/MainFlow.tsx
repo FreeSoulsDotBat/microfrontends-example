@@ -16,7 +16,7 @@ export const MainFlow = () => {
 				{route.pathname == '/' ? (
 					<div>
 						<Link className="base__links" to={'/mf1'}>
-							Let me see some dogs
+							Let me see some doggos
 						</Link>
 						{/* <Link to={'/mf2'}>Let me see some dogs</Link> */}
 					</div>

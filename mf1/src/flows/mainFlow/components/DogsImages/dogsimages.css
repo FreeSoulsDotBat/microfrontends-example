@@ -6,3 +6,20 @@
 .mfone__dog-images {
 	@apply w-80 h-80 rounded-2xl m-4;
 }
+
+#mfone__links-box {
+	@apply col-auto flex items-center justify-around w-full h-full;
+}
+
+.mfone__dog-links {
+	@apply no-underline bg-blue-700 outline-none border-none text-white
+    text-base p-2 font-bold rounded-lg cursor-pointer duration-300 w-auto h-auto;
+}
+
+.mfone__dog-links:hover {
+	@apply bg-blue-600 duration-500;
+}
+
+#mfone__loading {
+	@apply text-2xl;
+}

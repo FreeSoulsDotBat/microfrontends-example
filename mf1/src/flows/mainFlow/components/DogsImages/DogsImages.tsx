@@ -43,7 +43,7 @@ export const DogsImages: FC<{}> = () => {
 						)
 					})
 				) : (
-					<div className="text-2xl">Loading...</div>
+					<div id="mfone__loading">Loading...</div>
 				)}
 			</div>
 			<div id="mfone__links-box">
