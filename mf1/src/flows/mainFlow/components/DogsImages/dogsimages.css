@@ -1,0 +1,8 @@
+#mfone__images-box {
+	min-height: 40rem;
+	@apply flex justify-center items-center w-full flex-wrap;
+}
+
+.mfone__dog-images {
+	@apply w-80 h-80 rounded-2xl m-4;
+}

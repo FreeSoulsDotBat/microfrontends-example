@@ -1,59 +1,22 @@
-import React, { FC, Suspense, useEffect, useState } from 'react'
-import { httpService } from 'dataValidation/httpService'
+import React, { lazy, Suspense, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { DogsImages } from './components'
 import './mainflow.css'
 
-export interface DogImageProps {
-	url: string
-}
+// const DogsImages = lazy(() => import('./components/DogsImages/DogsImages'))
 
 export const MainFlow = () => {
-	const URL_BASE = 'https://api.thedogapi.com/v1/images/search'
-	const [data, setData] = useState([])
-
-	const fetchData = async () => {
-		const response = await httpService.request({
-			url: `${URL_BASE}?limit=10`,
-			method: 'get',
-			headers: { 'x-api-key': '' }
-		})
-		setData(response.body)
-	}
-
-	useEffect(() => {
-		fetchData()
-	}, [])
-
-	const DogImage: FC<DogImageProps> = ({ url }) => {
-		return (
-			<img src={url} alt="I'am a doggo." className="mfone__dog-images" />
-		)
-	}
-
 	return (
 		<div id="mfone__dog-container">
-			<Suspense fallback={<div>Carregando...</div>}>
-				<div id="mfone__images-box">
-					{data
-						? data.map((element, index) => {
-								return (
-									<DogImage key={index} url={element.url} />
-								)
-						  })
-						: null}
-				</div>
-			</Suspense>
-			<div id="mfone__links-box">
-				<Link to="/" className="mfone__dog-links">
-					Back to Home page
-				</Link>
-				<button
-					onClick={() => fetchData()}
-					className="mfone__dog-links"
-				>
-					More Doggos
-				</button>
-			</div>
+			{/* <Suspense
+				fallback={
+					<div className="h-96 w-full text-2xl text-center items-center">
+						Loading...
+					</div>
+				}
+			> */}
+			<DogsImages />
+			{/* </Suspense> */}
 		</div>
 	)
 }

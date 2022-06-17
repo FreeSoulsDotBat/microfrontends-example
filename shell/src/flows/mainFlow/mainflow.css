@@ -17,7 +17,7 @@
 
 #base__content {
 	display: flex;
-	height: 50rem;
+	height: auto;
 	justify-content: center;
 	align-items: center;
 	grid-area: content;
