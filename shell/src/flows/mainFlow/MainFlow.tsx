@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { Header } from '../../components'
-import './mainflow.css'
+import './mainflow.scss'
 import { useLocation } from 'react-router-dom'
 
 export const MainFlow = () => {
@@ -18,7 +18,9 @@ export const MainFlow = () => {
 						<Link className="base__links" to={'/mf1'}>
 							Let me see some doggos
 						</Link>
-						{/* <Link to={'/mf2'}>Let me see some dogs</Link> */}
+						<Link className="base__links" to={'/mf2'}>
+							Let me see some cats
+						</Link>
 					</div>
 				) : null}
 				<Outlet />

@@ -44,7 +44,8 @@ module.exports = {
 			name: 'shell',
 			filename: 'remoteEntry.js',
 			remotes: {
-				mf1: 'mf1@http://localhost:3001/remoteEntry.js'
+				mf1: 'mf1@http://localhost:3001/remoteEntry.js',
+				mf2: 'mf2@http://localhost:3002/remoteEntry.js'
 			},
 			exposes: {},
 			shared: {
