@@ -1,1 +1,1 @@
-export { DogsImages } from './DogsImages/DogsImages'
+export { DogsImages } from './dogsImages/DogsImages'

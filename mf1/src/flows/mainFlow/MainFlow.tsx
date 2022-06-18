@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { DogsImages } from './components'
 import './mainflow.css'
 
