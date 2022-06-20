@@ -15,8 +15,8 @@ const LoginForm: FC<LoginFormProps> = ({ callback }) => {
 	}
 
 	return (
-		<form className="loginPage__form" onSubmit={handleSubmit}>
-			<div className="loginPage__form__field">
+		<form className="login-page__form" onSubmit={handleSubmit}>
+			<div className="login-page__form-field">
 				<input
 					type="email"
 					id="email"
@@ -28,7 +28,7 @@ const LoginForm: FC<LoginFormProps> = ({ callback }) => {
 				></input>
 				<span>E-mail inválido</span>
 			</div>
-			<div className="loginPage__form__field">
+			<div className="login-page__form-field">
 				<input
 					type="password"
 					id="password"
@@ -40,7 +40,7 @@ const LoginForm: FC<LoginFormProps> = ({ callback }) => {
 				></input>
 				<span>Senha inválida</span>
 			</div>
-			<div className="loginPage__form__button">
+			<div className="login-page__form-button">
 				<button>Entrar</button>
 			</div>
 		</form>

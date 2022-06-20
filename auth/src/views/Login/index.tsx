@@ -38,8 +38,8 @@ const Login = () => {
 	}
 
 	return (
-		<div className="loginPage">
-			<div className="loginPage__title">Identifique-se</div>
+		<div className="login-page">
+			<div className="login-page__title">Identify yourself</div>
 			{notifications && (
 				<Notifications
 					message={messagesProps[notifications]}
@@ -47,7 +47,7 @@ const Login = () => {
 				></Notifications>
 			)}
 			<LoginForm callback={handleSubmit}></LoginForm>
-			<Link className="loginPage__link" to={'/reset-password'}>
+			<Link className="login-page__link" to={'/reset-password'}>
 				Esqueci minha senha.
 			</Link>
 		</div>
