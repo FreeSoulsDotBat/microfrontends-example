@@ -46,7 +46,9 @@ module.exports = {
 			remotes: {
 				dataValidation: 'dataValidation@http://localhost:3004/remoteEntry.js'
 			},
-			exposes: {},
+			exposes: {
+				'./AuthRoutes': './src/routes.tsx'
+			},
 			shared: {
 				...deps,
 				react: {
