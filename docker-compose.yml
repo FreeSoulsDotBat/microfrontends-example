@@ -11,7 +11,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./shell/:/shell/
+      - ./shell/:/apps/shell/
     ports:
       - "3000:3000"
     networks:
@@ -24,36 +24,36 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./mf1/:/mf1/
+      - ./mf1/:/apps/mf1/
     ports:
       - "3001:3001"
     networks:
       - microfrontends-example
     entrypoint: ["yarn", "start"]
 
-  # mf2:
-  #   build: ./mf2
-  #   container_name: mf2
-  #   tty: true
-  #   volumes:
-  #     - ./mf2/:/mf2/
-  #   ports:
-  #     - "3002:3002"
-  #   networks:
-  #     - microfrontends-example
-  #   entrypoint: ["yarn", "start"]
+  mf2:
+    build: ./mf2
+    container_name: mf2
+    tty: true
+    volumes:
+      - ./mf2/:/apps/mf2/
+    ports:
+      - "3002:3002"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
 
-  # auth:
-  #   build: ./auth
-  #   container_name: auth
-  #   tty: true
-  #   volumes:
-  #     - ./auth/:/auth/
-  #   ports:
-  #     - "3003:3003"
-  #   networks:
-  #     - microfrontends-example
-  #   entrypoint: ["yarn", "start"]
+  auth:
+    build: ./auth
+    container_name: auth
+    tty: true
+    volumes:
+      - ./auth/:/apps/auth/
+    ports:
+      - "3003:3003"
+    networks:
+      - microfrontends-example
+    entrypoint: ["yarn", "start"]
 
   data-validation:
     build: ./data-validation
@@ -61,7 +61,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./data-validation/:/data-validation/
+      - ./data-validation/:/apps/data-validation/
     ports:
       - "3004:3004"
     networks:
