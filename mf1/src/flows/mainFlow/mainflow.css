@@ -1,3 +1,7 @@
 #mfone__dog-container {
-	@apply grid w-auto h-full;
+	@apply grid w-auto h-full bg-yellow-400 bg-opacity-50 p-4;
+}
+
+#mfone__title {
+	@apply text-2xl font-sans font-medium text-center;
 }

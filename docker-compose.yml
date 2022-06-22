@@ -35,6 +35,7 @@ services:
     build: ./mf2
     container_name: mf2
     tty: true
+    stdin_open: true
     volumes:
       - ./mf2/:/apps/mf2/
     ports:
