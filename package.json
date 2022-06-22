@@ -4,7 +4,10 @@
   "description": "Example of a Microfrontends based architecture.",
   "main": "index.js",
   "repository": "https://github.com/FreeSoulsDotBat/microfrontends-example",
-  "author": "FreeSoulsDotBat",
+  "author": {
+    "name": "Jonatãn Bossan",
+    "email": "jonatan.fbossan@gmail.com"
+  },
   "license": "MIT",
   "private": false
 }

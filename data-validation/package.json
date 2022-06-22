@@ -12,7 +12,10 @@
 		"precommit": "yarn pretty && yarn lint"
 	},
 	"license": "MIT",
-	"author": "Akna Development Team",
+	"author": {
+		"name": "Jonatãn Bossan",
+		"email": "jonatan.fbossan@gmail.com"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.15.8",
 		"@babel/plugin-transform-runtime": "^7.15.8",

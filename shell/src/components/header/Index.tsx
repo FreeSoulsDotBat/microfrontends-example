@@ -5,12 +5,7 @@ import './style.scss'
 export const Header = () => {
 	return (
 		<React.Fragment>
-			<header id="header">
-				Header from Shell
-				<Link id="header__link" to={'/auth'}>
-					Login
-				</Link>
-			</header>
+			<header id="header">Header from Shell</header>
 		</React.Fragment>
 	)
 }

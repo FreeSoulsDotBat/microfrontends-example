@@ -46,7 +46,6 @@ module.exports = {
 			remotes: {
 				mf1: 'mf1@http://localhost:3001/remoteEntry.js',
 				mf2: 'mf2@http://localhost:3002/remoteEntry.js',
-				auth: 'auth@http://localhost:3003/remoteEntry.js'
 			},
 			exposes: {},
 			shared: {

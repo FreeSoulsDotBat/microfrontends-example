@@ -14,7 +14,7 @@ export const MainFlow = () => {
 			</div>
 			<div id="base__content">
 				{route.pathname == '/' ? (
-					<div>
+					<div id="base__content-links">
 						<Link className="base__links" to={'/mf1'}>
 							Let me see some doggos
 						</Link>

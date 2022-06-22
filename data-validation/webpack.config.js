@@ -42,8 +42,6 @@ module.exports = {
 			remotes: {},
 			exposes: {
 				'./httpService': './src/services/http/http-service.ts',
-				'./localStorageService':
-					'./src/services/cache/local-storage-service.ts'
 			},
 			shared: {
 				...deps,

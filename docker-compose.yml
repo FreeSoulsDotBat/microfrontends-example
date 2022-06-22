@@ -43,18 +43,6 @@ services:
       - microfrontends-example
     entrypoint: ["yarn", "start"]
 
-  auth:
-    build: ./auth
-    container_name: auth
-    tty: true
-    volumes:
-      - ./auth/:/apps/auth/
-    ports:
-      - "3003:3003"
-    networks:
-      - microfrontends-example
-    entrypoint: ["yarn", "start"]
-
   data-validation:
     build: ./data-validation
     container_name: data-validation

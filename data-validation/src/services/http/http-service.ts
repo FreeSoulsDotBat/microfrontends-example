@@ -1,7 +1,5 @@
 import { HttpMethod, HttpRequest, HttpResponse } from '../../protocols/http'
-
 import axios, { AxiosResponse } from 'axios'
-
 import { Api } from '../../providers/api'
 
 export const httpService = {
@@ -25,7 +23,7 @@ export const httpService = {
 			})
 		} catch (error: unknown) {
 			return {
-				error: `Erro na requisição: ${error}`
+				error: `Requisition error: ${error}`
 			}
 		}
 		return {
