@@ -46,8 +46,8 @@ module.exports = (_, argv) => ({
 			name: 'shell',
 			filename: 'remoteEntry.js',
 			remotes: {
-				mf1: 'mf1@https://microfrontend1-mfe.vercel.app/remoteEntry.js',
-				mf2: 'mf2@https://microfrontend2-mfe.vercel.app/remoteEntry.js',
+				mf1: `mf1@${argv.mode === 'development' ? 'http://localhost:3001/remoteEntry.js' : 'https://microfrontend1-mfe.vercel.app/remoteEntry.js'}`,
+				mf2: `mf2@${argv.mode === 'development' ? 'http://localhost:3002/remoteEntry.js' : 'https://microfrontend2-mfe.vercel.app/remoteEntry.js'}`,
 			},
 			exposes: {},
 			shared: {

@@ -47,7 +47,7 @@ module.exports = (_, argv) => ({
 			name: 'mf1',
 			filename: 'remoteEntry.js',
 			remotes: {
-				dataValidation: 'dataValidation@https://data-validation-mfe.vercel.app/remoteEntry.js'
+				dataValidation: `dataValidation@${argv.mode === 'development' ? 'http://localhost:3004/remoteEntry.js' : 'https://data-validation-mfe.vercel.app/remoteEntry.js'}`
 			},
 			exposes: {
 				'./Mf1Routes': './src/routes.tsx'
