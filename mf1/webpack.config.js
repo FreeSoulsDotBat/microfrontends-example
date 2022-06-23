@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+const webpack = require('webpack')
 
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
@@ -62,6 +63,9 @@ module.exports = (_, argv) => ({
 					requiredVersion: deps['react-dom']
 				}
 			}
+		}),
+		new webpack.DefinePlugin({
+			'process.env.API_KEY_DOGS': JSON.stringify(process.env.API_KEY_DOGS)
 		}),
 		new HtmlWebPackPlugin({
 			template: './src/index.html'
