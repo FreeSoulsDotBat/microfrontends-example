@@ -1,10 +1,13 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+const webpack = require('webpack')
 
 const deps = require('./package.json').dependencies
-module.exports = {
+module.exports = (_, argv) => ({
 	output: {
-		publicPath: 'http://localhost:3002/'
+		publicPath: argv.mode === 'development'
+			? 'http://localhost:3002/'
+			: 'https://microfrontend2-mfe.vercel.app/'
 	},
 
 	resolve: {
@@ -44,7 +47,7 @@ module.exports = {
 			name: 'mf2',
 			filename: 'remoteEntry.js',
 			remotes: {
-				dataValidation: 'dataValidation@http://localhost:3004/remoteEntry.js'
+				dataValidation: 'dataValidation@https://data-validation-mfe.vercel.app/remoteEntry.js'
 			},
 			exposes: {
 				'./Mf2Routes': './src/routes.tsx'
@@ -61,8 +64,11 @@ module.exports = {
 				}
 			}
 		}),
+		new webpack.DefinePlugin({
+			'process.env.API_KEY_CATS': JSON.stringify(process.env.API_KEY_CATS)
+		}),
 		new HtmlWebPackPlugin({
 			template: './src/index.html'
 		})
 	]
-}
+})

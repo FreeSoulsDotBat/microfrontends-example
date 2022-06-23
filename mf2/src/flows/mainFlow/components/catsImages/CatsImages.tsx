@@ -14,7 +14,7 @@ export const CatsImages = () => {
 		const response = await httpService.request({
 			url: `${URL_BASE}?limit=10`,
 			method: 'get',
-			headers: { 'x-api-key': '855c957a-5011-4a1a-9c20-820fd2a640bb' }
+			headers: { 'x-api-key': process.env.API_KEY_CATS }
 		})
 		return response
 	}
