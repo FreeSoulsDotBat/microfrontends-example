@@ -14,7 +14,7 @@ export const DogsImages: FC<{}> = () => {
 		const response = await httpService.request({
 			url: `${URL_BASE}?limit=10`,
 			method: 'get',
-			headers: { 'x-api-key': '5c31529c-938d-49b1-aba0-1888bd66efda' }
+			headers: { 'x-api-key': process.env.API_KEY_DOGS }
 		})
 		return response
 	}
